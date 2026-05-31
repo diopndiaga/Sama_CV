@@ -1,0 +1,107 @@
+.conteneur {
+    display: grid;
+    grid-template-areas:
+        "header  header  header"
+        "sidebar main    main"
+        "footer  footer  footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+
+}
+header        { grid-area: header;  background-color: #3498db; padding: 20px; }
+.side-bare    { grid-area: sidebar; background-color: #2c3e50; padding: 20px; color: white; }
+main          { grid-area: main;    background-color: #ecf0f1; padding: 20px; }
+footer        { grid-area: footer;  background-color: #34495e; padding: 15px; color: white; }
+.grille-cartes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+header{
+    display: flex;
+    align-items: center;  /* centrer verticalement */
+    gap: 30px;
+    background-color: #2c3e50;  /* même couleur que sidebar */
+    padding: 30px;
+    color: white;
+
+}
+
+header img {
+    border-radius: 50%;   /* photo ronde */
+    border: 3px solid white;
+}
+header h1 {
+    font-size: 32px;
+}
+header h2 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #bdc3c7;
+}
+.side-bare {
+    grid-area: sidebar;
+    background-color: #34495e;
+    padding: 25px;
+    color: white;
+}
+
+.side-bare h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #3498db;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.side-bare p {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.side-bare hr {
+    border: none;
+    border-top: 1px solid #4a6278;
+    margin: 15px 0;
+}
+main {
+    background-color: #f8f9fa;
+    padding: 30px;
+}
+
+main h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2c3e50;
+    border-left: 4px solid #3498db;  /* barre bleue à gauche */
+    padding-left: 10px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+
+main p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+main hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+.date {
+    font-size: 15px;
+    color: #3498db;
+    font-style: italic;
+}
